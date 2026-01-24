@@ -1,24 +1,34 @@
-import { Heading } from './components/Heading';
+import { Container } from './components/Container';
+import { Logo } from './components/Logo';
+import { Menu } from './components/Menu';
+import { CountDown } from './components/CountDown';
 
 import './styles/theme.css';
 import './styles/global.css';
-import { TimerIcon } from 'lucide-react';
 
 export function App() {
     return (
         <>
-            <Heading>
-                Olá, mundo!
-                <button>
-                    <TimerIcon />
-                </button>
-            </Heading>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-                eaque perferendis omnis esse provident animi, numquam, suscipit
-                autem eum aspernatur corporis nihil nobis ratione sapiente
-                obcaecati odio vitae eos molestias!
-            </p>
+            <Container>
+                <Logo />
+            </Container>
+
+            <Container>
+                <Menu />
+            </Container>
+
+            <Container>
+                <CountDown />
+            </Container>
+
+            <Container>
+                <form className='form' action=''>
+                    <div className='formRow'>
+                        <label htmlFor='input'>task</label>
+                        <input id='input' type='text' />
+                    </div>
+                </form>
+            </Container>
         </>
     );
 }
